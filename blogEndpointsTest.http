@@ -1,0 +1,79 @@
+### Create a new Blog with credentials
+
+POST http://localhost:4000/api/v1/blog
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "title": "blog title",
+    "description": "description is here",
+    "category": "categories is here"
+}
+
+
+
+### Update a blog by id
+
+PUT http://localhost:4000/api/v1/blog/657e93f3b53d8dfe7a01f44a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "title": "blog title here",
+    "description": "description",
+    "category": "categories"
+}
+
+
+
+### single blog by id
+
+GET http://localhost:4000/api/v1/blog/657e8aa9764f84b38144fa6f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+
+
+### all blogs
+
+GET http://localhost:4000/api/v1/blog/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+
+
+### delete a single blog by id
+
+DELETE http://localhost:4000/api/v1/blog/657e93f3b53d8dfe7a01f44a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+
+
+### like a single blog by blogId
+
+PUT http://localhost:4000/api/v1/blog/likes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "blogId": "657e89a076346c88d31748e0"
+}
+
+
+
+### dislike a single blog by blogId
+
+PUT http://localhost:4000/api/v1/blog/dislikes
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "blogId": "657e8aa9764f84b38144fa6f"
+}
+
+
+
+
+
+

@@ -1,0 +1,54 @@
+### Create a new Enquiry with credentials
+
+POST http://localhost:4000/api/v1/enquiry
+Content-Type: application/json
+
+{
+    "name": "number",
+    "email": "student@gmail.com",
+    "mobile": "01506829549",
+    "comments": "pass1234",
+    "status": "In Progress"
+}
+
+
+
+### Update a Enquiry by id
+
+PUT http://localhost:4000/api/v1/enquiry/657fc04ed29a5e60fa36bfd2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "name": "number",
+    "email": "student@gmail.com",
+    "mobile": "01506829549",
+    "comments": "pass1234",
+}
+
+
+
+### delete a single Enquiry by id
+
+DELETE http://localhost:4000/api/v1/enquiry/65b7003be9270c7c31c33e7c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcwNjQ5MTgzOSwiZXhwIjoxNzA2NTc4MjM5fQ.t_z_vRiEw7dmQZsOtZt0RDPUaCCaI3FCUWRSgxAQLTw
+
+
+
+### single Enquiry by id
+
+GET http://localhost:4000/api/v1/enquiry/65b7003be9270c7c31c33e7c
+Content-Type: application/json
+
+
+
+### all Enquirys
+
+GET http://localhost:4000/api/v1/enquiry/
+Content-Type: application/json
+Authorization:
+
+
+
+

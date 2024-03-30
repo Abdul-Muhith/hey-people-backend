@@ -1,0 +1,49 @@
+### Create a new Category with credentials
+
+POST http://localhost:4000/api/v1/product-category
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "title": "blog title two"
+}
+
+
+
+### Update a Category by id
+
+PUT http://localhost:4000/api/v1/product-category/657fc9dc7b8488f0221918cb
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "title": "product"
+}
+
+
+
+### delete a single Category by id
+
+DELETE http://localhost:4000/api/v1/product-category/657fc5127099ac8eb260bc09
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+
+
+### single Category by id
+
+GET http://localhost:4000/api/v1/product-category/657fc5127099ac8eb260bc09
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+
+
+### all Categories
+
+GET http://localhost:4000/api/v1/product-category/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+
+
+

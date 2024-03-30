@@ -1,0 +1,30 @@
+### Upload product image to 'PUBLIC/IMAGES/' directory
+
+PUT http://localhost:4000/api/v1/upload/657d220d9ca617450eba7977
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NzNlOTlmODIwZTdjODVlZWJhMmI3YyIsImlhdCI6MTcwMjk0NzIxMywiZXhwIjoxNzAzMDMzNjEzfQ.lSCASWZE3pJofxwLZOwv00unl4EpAppcXFWlnMxcx_Q
+
+{
+    "name": "PRO Coupon",
+    "expiry": "Thu, 01 Jan 2023 23:00:00 GMT",
+    "discount": 100
+}
+
+
+
+// AFTER CLASS 2
+### Upload product image to 'PUBLIC/IMAGES/' directory
+
+PUT http://localhost:4000/api/v1/upload/products/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NzNlOTlmODIwZTdjODVlZWJhMmI3YyIsImlhdCI6MTcwMjk0NzIxMywiZXhwIjoxNzAzMDMzNjEzfQ.lSCASWZE3pJofxwLZOwv00unl4EpAppcXFWlnMxcx_Q
+
+{
+    "name": "PRO Coupon",
+    "expiry": "Thu, 01 Jan 2023 23:00:00 GMT",
+    "discount": 100
+}
+
+
+### Upload product image to 'PUBLIC/IMAGES/' directory
+### Get All Coupons

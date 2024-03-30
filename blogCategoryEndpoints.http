@@ -1,0 +1,49 @@
+### Create a new blog with credentials
+
+POST http://localhost:4000/api/v1/blog-category
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "title": "blog title"
+}
+
+
+
+### Update a blog by id
+
+PUT http://localhost:4000/api/v1/blog-category/657fc04ed29a5e60fa36bfd2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "title": "blog title here"
+}
+
+
+
+### delete a single blog by id
+
+DELETE http://localhost:4000/api/v1/blog-category/657fc5127099ac8eb260bc09
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+
+
+### single blog by id
+
+GET http://localhost:4000/api/v1/blog-category/657fc5127099ac8eb260bc09
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+
+
+### all blogs
+
+GET http://localhost:4000/api/v1/blog-category/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+
+
+

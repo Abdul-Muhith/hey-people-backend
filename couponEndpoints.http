@@ -1,0 +1,46 @@
+### Create a new Coupon
+
+POST http://localhost:4000/api/v1/coupon
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMzEyMzUyNSwiZXhwIjoxNzAzMjA5OTI1fQ.WCUNgnZaAzTyMADJNtadofCQpRJduIpYCiCsJWzq7Rg
+
+{
+    "name": "EID Coupon",
+    "expiry": "Thu, 01 Jan 2023 23:00:00 GMT",
+    "discount": 20
+}
+
+
+### Get All Coupons
+
+GET http://localhost:4000/api/v1/coupon
+Content-Type: application/json
+
+
+
+### Update Coupon by ID
+
+PUT http://localhost:4000/api/v1/coupon/6580f74a1f0fb8ff268c897f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NzNlOTlmODIwZTdjODVlZWJhMmI3YyIsImlhdCI6MTcwMjk0NzIxMywiZXhwIjoxNzAzMDMzNjEzfQ.lSCASWZE3pJofxwLZOwv00unl4EpAppcXFWlnMxcx_Q
+
+{
+    "discount": 100
+}
+
+
+### Delete Coupon by ID
+
+DELETE http://localhost:4000/api/v1/coupon/6580f74a1f0fb8ff268c897f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NzNlOTlmODIwZTdjODVlZWJhMmI3YyIsImlhdCI6MTcwMjk0NzIxMywiZXhwIjoxNzAzMDMzNjEzfQ.lSCASWZE3pJofxwLZOwv00unl4EpAppcXFWlnMxcx_Q
+
+
+
+### Get Coupon by ID
+
+GET http://localhost:4000/api/v1/coupon/6580fad50027f213ce311c4f
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1NzNlOTlmODIwZTdjODVlZWJhMmI3YyIsImlhdCI6MTcwMjk0NzIxMywiZXhwIjoxNzAzMDMzNjEzfQ.lSCASWZE3pJofxwLZOwv00unl4EpAppcXFWlnMxcx_Q
+
+

@@ -1,0 +1,363 @@
+### Authentication - REGISTER
+
+POST http://localhost:4000/api/v1/user/register
+Content-Type: application/json
+
+{
+    "firstName": "number",
+    "lastName": "student",
+    "mobile": "01506829549",
+    "email": "student@gmail.com",
+    "password": "pass1234",
+    "role": ["student"]
+}
+
+
+
+### Authentication - LOGIN
+
+POST http://localhost:4000/api/v1/user/login
+Content-Type: application/json
+
+{
+    "email": "mamun@email.com",
+    "password": "pass1234"
+}
+
+
+
+### Authentication - LOGIN ADMIN
+
+POST http://localhost:4000/api/v1/user/admin-login
+Content-Type: application/json
+
+{
+    "email": "sone@gmail.com",
+    "password": "pass1234"
+}
+
+
+### All Members Lists
+
+GET http://localhost:4000/api/v1/user/all-users
+
+
+
+### Find Single Member - By ID
+
+GET http://localhost:4000/api/v1/user/657093b19bc4ef0731bc9c96
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### Delete Indivisual Member Addmission - By ID
+
+DELETE http://localhost:4000/api/v1/user/65716f47c80000d57bac5f62
+
+
+
+### Update Completely All Info of a Member - By ID
+
+PUT http://localhost:4000/api/v1/user/657093b19bc4ef0731bc9c96
+Content-Type: application/json
+
+{
+    "password": "1234pass1234",
+    "role": ["admin", "user", "student"]
+}
+
+
+
+### Update Completely All Info of a Member - By ID FROM TOKEN
+
+PUT http://localhost:4000/api/v1/user/edit-user
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+{
+    "role": ["admin", "student"]
+}
+
+
+
+### block a user
+
+PUT http://localhost:4000/api/v1/user/block-user/657093b19bc4ef0731bc9c96
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### unBlock a user
+
+PUT http://localhost:4000/api/v1/user/unblock-user/6573ee446020f2a131b4bbef
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### Get Refresh cookies
+
+GET http://localhost:4000/api/v1/user/refresh-token
+Content-Type: application/json
+
+
+
+### Logout a user
+
+GET http://localhost:4000/api/v1/user/logout
+Content-Type: application/json
+
+
+
+### Change Password
+
+PUT http://localhost:4000/api/v1/user/change-password
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+{
+    "password": "1234pass"
+}
+
+
+
+### forgot password reset token
+
+POST http://localhost:4000/api/v1/user/forgot-password-token
+Content-Type: application/json
+
+{
+    "email": "mamun34sarkar@gmail.com"
+}
+
+
+
+### reset password
+
+PUT http://localhost:4000/api/v1/user/reset-password/5d7572f8925ae39df67c4856b6dbf0e0c5b55deb3b140c27eed8263c0637e738
+Content-Type: application/json
+
+{
+    "password": "pass1234"
+}
+
+
+
+### get all own wish list
+
+GET http://localhost:4000/api/v1/user/all-own-wishlist
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### Save a user Address
+
+PUT http://localhost:4000/api/v1/user/save-address
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+{
+    "address": "my address"
+}
+
+
+
+### CREATE a new Cart for LOGGEDIN USER
+
+POST http://localhost:4000/api/v1/user/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+{
+    "cart" : [
+        {
+            "_id" : "6576be22c285f80125c9194c",
+            "count": 1,
+            "color": "yellow"
+        },
+        {
+            "_id" : "6577f81d56b550af125d8098",
+            "count": 2,
+            "color": "black"
+        }
+    ]
+}
+
+
+### CREATE a new Cart for LOGGEDIN USER // TODO: ON CLASS 08
+
+POST http://localhost:4000/api/v1/user/create-cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+{
+    "productId" : "6577f81d56b550af125d8098",
+    "color": "65b70035e9270c7c31c33e7a",
+    "price" : 350,
+    "quantity": 2
+}
+
+
+### get all Carts of a LOGGEDIN USER
+
+GET http://localhost:4000/api/v1/user/cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+### Empty Cart BY LOGGEDIN USER
+
+DELETE http://localhost:4000/api/v1/user/empty-cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+
+### Empty Product from Own Cart BY LOGGEDIN USER
+
+DELETE http://localhost:4000/api/v1/user/remove-product-from-own-cart
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### Apply coupon BY LOGGEDIN USER
+
+POST http://localhost:4000/api/v1/user/cart/apply-coupon
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+{
+    "coupon": "HELLO BOY"
+}
+
+
+
+### Create a new order BY LOGGEDIN USER
+
+POST http://localhost:4000/api/v1/user/cart/cash-order
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+{
+    "COD": true,
+    "couponApplied": true
+}
+
+
+
+### Authenticate User Could Create a new Order
+
+POST http://localhost:4000/api/v1/user/cart/authenticate-user-order
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+{
+    "products": [
+        {
+            "product": "657d220d9ca617450eba7977",
+            "count": 17,
+            "price": 590,
+            "color": "65ca2eac6d31cb0d70bde0b4"
+        }
+    ],
+    "totalPrice": 1500,
+    "totalAfterDiscount": 1155,
+    "shippingInfo": {
+        "firstName": "al",
+        "lastName": "mamun",
+        "address": "hey",
+        "pincode": 133,
+        "state": "mirpur",
+        "city": "dhaka",
+        "country": "bangladesh",
+        "other": "south"
+    },
+    "paymentIntent": {
+        "razorpayOrderId": "65ca2eac6d31cb0d70bde0b4",
+        "razorpayPaymentId" : "65b705424230c1a864c71457"
+    }
+}
+
+
+
+GET http://localhost:4000/api/v1/user/get-loggedIn-orders
+### Get all orders of a LOGGEDIN USER
+
+GET http://localhost:4000/api/v1/user/logged-in-orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+### Update an order Status
+
+PUT http://localhost:4000/api/v1/user/order/update-order-status/65d4567fc3cf39b0fa6dd8c5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+{
+    "status": "Not Processed"
+}
+
+
+### Get all orders
+
+GET http://localhost:4000/api/v1/user/all-orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+### POST all orders by User ID
+
+POST http://localhost:4000/api/v1/user/single-user-orders/65b1e18fb394aa161a0cd837
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### Get all orders by User ID
+
+GET http://localhost:4000/api/v1/user/single-user-orders/657e4e77a4a172cce5cf07cf
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### Get Month wise all orders
+
+GET http://localhost:4000/api/v1/user/month-wise-orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### Get Yearly all orders
+
+GET http://localhost:4000/api/v1/user/yearly-orders
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### Get single order by ORDER ID
+
+GET http://localhost:4000/api/v1/user/single-order/65d7364b3256c0598e08b7dd
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcxMDMwOTY2OCwiZXhwIjoxNzEwMzk2MDY4fQ.94WfE_NdJmdQaLTako37RBGhgEul6LRVEGkKmecOrnI
+
+
+
+### Checkout Product by Authenticate
+
+POST http://localhost:4000/api/v1/user//cart/order/checkout
+
+### Payment Verification by Authenticate
+
+POST http://localhost:4000/api/v1/user/cart/order/payment-verification
+
+
+
+

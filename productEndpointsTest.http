@@ -1,0 +1,90 @@
+### Create a new Product
+
+POST http://localhost:4000/api/v1/product
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcwNjQ5MTgzOSwiZXhwIjoxNzA2NTc4MjM5fQ.t_z_vRiEw7dmQZsOtZt0RDPUaCCaI3FCUWRSgxAQLTw
+
+{
+    "title": "new",
+    "description": "hey this is a apple product",
+    "price": 500,
+    "quantity": 100,
+    "color": ["65b704844230c1a864c71454", "65b705424230c1a864c71457"],
+    "tags": ["featured", "popular"],
+    "brand": "HP",
+    "category": "Laptop"
+}
+
+
+
+### Get Product by ID
+
+GET http://localhost:4000/api/v1/product/657d220d9ca617450eba7977
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcwOTE4NzA5NywiZXhwIjoxNzA5MjczNDk3fQ.b56L3vGVmpTvhMES1Zq3cQPR5zjCHUeUQo0KeXcPUbo
+
+
+### Get All Products
+
+GET http://localhost:4000/api/v1/product/all-products
+Content-Type: application/json
+
+
+
+### Update Product by ID
+
+PUT http://localhost:4000/api/v1/product/65781c83998fd802210eb324
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcwOTE4NzA5NywiZXhwIjoxNzA5MjczNDk3fQ.b56L3vGVmpTvhMES1Zq3cQPR5zjCHUeUQo0KeXcPUbo
+
+{
+    "price": 10000
+}
+
+
+### Delete Product by ID
+
+DELETE http://localhost:4000/api/v1/product/65854dac6e782f5bd9ebcc05
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcwOTE4NzA5NywiZXhwIjoxNzA5MjczNDk3fQ.b56L3vGVmpTvhMES1Zq3cQPR5zjCHUeUQo0KeXcPUbo
+
+
+### Get All Products - req.query checking
+# AFTER SORTING
+# GET http://localhost:4000/api/v1/product/all-products?brand=Lenovo&category=Desktop
+# GET http://localhost:4000/api/v1/product/all-products?brand=Lenovo&category=Desktop&sort=price
+# GET http://localhost:4000/api/v1/product/all-products?price[gte]=100&price[lte]=800
+# GET http://localhost:4000/api/v1/product/all-products?sort=category,brand
+# GET http://localhost:4000/api/v1/product/all-products?fields=title,price,category
+# GET http://localhost:4000/api/v1/product/all-products?page=1&limit=3
+
+GET http://localhost:4000/api/v1/product/all-products?category=Mobile
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcwOTE4NzA5NywiZXhwIjoxNzA5MjczNDk3fQ.b56L3vGVmpTvhMES1Zq3cQPR5zjCHUeUQo0KeXcPUbo
+
+
+
+### Add Product to wishlist of user
+
+PUT http://localhost:4000/api/v1/product/wishlist
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcwOTE4NzA5NywiZXhwIjoxNzA5MjczNDk3fQ.b56L3vGVmpTvhMES1Zq3cQPR5zjCHUeUQo0KeXcPUbo
+
+{
+    "prodId": "657d220d9ca617450eba7977"
+}
+
+
+
+### Rate Product
+
+PUT http://localhost:4000/api/v1/product/rate
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcwOTE4NzA5NywiZXhwIjoxNzA5MjczNDk3fQ.b56L3vGVmpTvhMES1Zq3cQPR5zjCHUeUQo0KeXcPUbo
+
+{
+    "star": 3,
+    "comment": "this is second",
+    "prodId": "657d220d9ca617450eba7977"
+}
+

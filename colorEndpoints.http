@@ -1,0 +1,48 @@
+### Create a new Color with credentials
+
+POST http://localhost:4000/api/v1/color
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "title": "Black"
+}
+
+
+
+### Update a Color by id
+
+PUT http://localhost:4000/api/v1/color/657fc04ed29a5e60fa36bfd2
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1N2U0ZTc3YTRhMTcyY2NlNWNmMDdjZiIsImlhdCI6MTcwMjg2NTEzMCwiZXhwIjoxNzAyOTUxNTMwfQ.HBACJdl1IXYn7dzMZTUgN6ZT3z3ThWPoO6DJo8MigG8
+
+{
+    "title": "Color title here"
+}
+
+
+
+### delete a single Color by id
+
+DELETE http://localhost:4000/api/v1/color/65b7003be9270c7c31c33e7c
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1YjFlMThmYjM5NGFhMTYxYTBjZDgzNyIsImlhdCI6MTcwNjQ5MTgzOSwiZXhwIjoxNzA2NTc4MjM5fQ.t_z_vRiEw7dmQZsOtZt0RDPUaCCaI3FCUWRSgxAQLTw
+
+
+
+### single Color by id
+
+GET http://localhost:4000/api/v1/color/65b7003be9270c7c31c33e7c
+Content-Type: application/json
+
+
+
+### all Colors
+
+GET http://localhost:4000/api/v1/color/
+Content-Type: application/json
+Authorization:
+
+
+
+
