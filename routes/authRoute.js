@@ -71,7 +71,7 @@ router.get('/month-wise-orders', authMiddleware, getMonthWiseOrdersController);
 router.get('/yearly-orders', authMiddleware, getYearlyOrdersController);
 router.get('/all-orders', authMiddleware, isAdmin, getAllOrdersController);
 router.get('/all-own-wishlist', authMiddleware, getWishListController);
-router.get('/:id', authMiddleware, isAdmin, isStudent, getASingleUserController);
+router.get('/:id', authMiddleware, getASingleUserController);
 router.get('/single-order/:id', authMiddleware, isAdmin, getSingleOrderByOrderIdController);
 
 router.put('/save-address', authMiddleware, saveUserAddressController);

@@ -483,11 +483,15 @@ export const emptyCartController = asyncHandler(async (req, res) => {
     validateMongodbId(_id);
 
     const user = await User.findOne({ _id });
-    const cart = await Cart.findOneAndReplace({ orderBy: user?._id });
 
-    if(!cart) throw new Error('Cart not found');
+    if (user) {
+        // const deletedCart = await Cart.findOneAndReplace({ userId: user?._id });
+        const deletedCart = await Cart.deleteMany({ userId: _id });
 
-    res.json(cart);
+        if (!deletedCart) throw new Error('Cart not found');
+
+        res.json({ message: "Cart Deleted Successfully", deletedCart });
+    }
 });
 
 // Apply Coupon
